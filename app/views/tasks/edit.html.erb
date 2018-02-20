@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <form >
+        <%= form_with model: @task do |form| %>
+        <div class="form-group">
+          <%= form.label :title "Title:", class: "col-md-4 control-label" %>
+            <div class="col-md-8">
+              <%= form.text_field :title, class: "form-control" %>
+            </div>
+        </div>
+        <div class="form-group">
+          <%= form.label :details, "Details:", class: "col-md-4 control-label" %>
+          <div class="col-md-8">
+            <%= form.text_field :details, class: "form-control"  %>
+          </div>
+        </div>
+        <div class="checkbox">
+          <%= f.check_box :workshop %> Checkbox Description
+        </div>
+        <%= f.submit "Submit", class: "btn btn-default btn-primary" %>
+   <% end %>
+      </form>
+    </div>
+  </div>
+</div>
